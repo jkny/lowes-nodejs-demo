@@ -1,0 +1,26 @@
+{
+  "name": "web-dev-test-level-1",
+  "version": "1.0.0",
+  "description": "nodejs eval",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "lowes",
+    "for",
+    "pros"
+  ],
+  "author": "john kamoosi",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2",
+    "express-handlebars": "^3.0.0",
+    "handlebars": "^4.0.6",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {
+    "express-handlebars": "^3.0.0"
+  }
+}

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Lowe's Assessment">
+    <title>John Kamoosi - Interview Test</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/overrides.css" />
+  </head>
+  <body>
+    <div id="prod-container" class="container">
+      <script id="prodTemplate" type="text/x-handlebars-template">
+      <div class="row header" id="masthead" >
+        <div class="col-sm-12 col-md-3 text-center">
+          <img src="{{productList.1.imageUrls.md}}" class="img-responsive" id="masthead_img" />
+        </div>
+        <div class="col-sm-12 col-md-5 text-center">
+          <h4 class="desc" id="masthead_desc">{{productList.1.description}}</h4>
+          <ul id="bullets"class="text-left">
+            <li>{{productList.1.marketingBullets.[1]}}</li>
+            <li>{{productList.1.marketingBullets.[2]}}</li>
+            <li>{{productList.1.marketingBullets.[3]}}</li>
+          </ul>  
+        </div>
+        <div class="col-sm-12 col-md-4">
+          <button type="button" class="btn btn-default btn-block" id="alerter">Add to Cart</button>
+          <br/>
+          <p class="price text-center" id="masthead_price">${{productList.1.pricing.price.selling}}</p>
+        </div>
+      </div>
+    </div>
+      <div class="row prod_row">
+      {{#each productList}}
+      {{#ifThird @index}}
+      </div>
+      <div class="row prod_row">
+      {{/ifThird}}
+      <div class="col-md-4 col-sm-12 text-center item" id="item-{{@index}}">
+        <img src="{{imageUrls.sm}}" /><br/>
+        <img src="{{imageUrls.md}}" class="header_only med"/><br/>
+        <p class="desc">{{description}}</p>
+        <ul class="hide bull">
+            <li>{{marketingBullets.[1]}}</li>
+            <li>{{marketingBullets.[2]}}</li>
+            <li>{{marketingBullets.[3]}}</li>
+        </ul> 
+        <p class="price">${{pricing.price.selling}}</p> 
+        <button type="button" class="btn btn-default btn-block">View More</button>
+      </div>
+      {{/each}}
+      </div>
+      </script>
+    </div>
+    <script type="text/javascript" src="assets/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="assets/js/handlebars-v4.0.5.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>   
+  </body>
+</html>
